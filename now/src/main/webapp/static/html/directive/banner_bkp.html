@@ -1,0 +1,79 @@
+<div>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+
+      <div class="navbar-header" ng-click="selectHome()">
+        <a class="navbar-brand" href="#{{bannerData.projectData.defaultPath}}">{{bannerData.projectData.projectName}}</a>
+      </div>
+
+      <div id="navbar" class="navbar-collapse collapse">
+
+        <!-- tabs -->
+
+        <ul class="nav navbar-nav">
+          <li ng-repeat="tab in bannerData.navData.mainNavData" ng-click="selectTab(tab)" ng-class="{active: tab.active}" ng-hide="tab.hidden">
+            <a href="#{{tab.path}}">{{tab.title}}</a>
+          </li>
+        </ul> 
+
+        <ul class="nav navbar-nav navbar-right">
+
+          <!-- User -->
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Welcome, {{bannerData.navData.configData.user.name}} <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li ng-repeat="(key, value) in bannerData.navData.configData.user.pref" ng-hide="tab.hidden">
+                <a href="#{{value.path}}">{{value.title}}</a>
+              </li>
+            </ul>
+          </li>  
+
+          <!-- Sign Up -->
+
+          <li ng-hide="bannerData.navData.configData.signup.hidden">
+            <a href="#{{bannerData.navData.configData.signup.path}}">{{bannerData.navData.configData.signup.title}}</a>
+          </li>
+
+          <!-- Sign In -->
+
+          <li class="dropdown">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown">
+              {{bannerData.navData.configData.user.signIn.title}} <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu" style="padding: 15px;min-width: 250px;">
+              <li>
+                <div class="row">
+                  <div class="col-md-12">
+                    <form class="form" role="form" method="post" action="{{bannerData.navData.configData.user.signIn.form.path}}" accept-charset="UTF-8" id="login-nav">
+                      <div class="form-group">
+                        <label class="sr-only" for="exampleInputEmail2">
+                          {{bannerData.navData.configData.user.signIn.form.inputs.emailId.title}}
+                        </label>
+                        <input name="{{bannerData.navData.configData.user.signIn.form.inputs.emailId.name}}" type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+                      </div>
+                      <div class="form-group">
+                        <label class="sr-only" for="exampleInputPassword2">
+                          {{bannerData.navData.configData.user.signIn.form.inputs.password.title}}
+                        </label>
+                        <input name="{{bannerData.navData.configData.user.signIn.form.inputs.password.name}}" type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                      </div>
+                      <div class="form-group">
+                        <button type="submit" class="btn btn-success btn-block">
+                          {{bannerData.navData.configData.user.signIn.form.title}}
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>      
+</div>

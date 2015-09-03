@@ -1,0 +1,74 @@
+{
+	"projectData": {
+		"projectName": "Now",
+		"defaultPath": "/home"	
+	},
+	"navData": {
+		"mainNavData": [{
+				"title": "Home",
+				"active": true,
+				"disabled": false,
+				"hidden": false,
+				"path": "/home"		
+			},{
+				"title": "About us",
+				"active": false,
+				"disabled": false,
+				"hidden": false,
+				"path": "/aboutUs"		
+			},{
+				"title": "Contact us",
+				"active": false,
+				"disabled": false,
+				"content": "Contact us",
+				"hidden": false,
+				"path": "/contactUs"		
+			}
+		],
+		"configData": {
+			"signup": {
+				"title": "Sign Up",
+				"active": false,
+				"disabled": false,
+				"hidden": false,
+				"path": "/register"					
+			},
+			"user":{
+				"name": "Guest",
+				"pref": {
+					"profile":{
+						"title": "Profile",
+						"active": false,
+						"disabled": false,
+						"hidden": false,
+						"path": "/profile"							
+					},
+					"signout": {
+						"title": "Sign Out",
+						"active": false,
+						"disabled": false,
+						"hidden": false,
+						"path": "/signout"					
+					}							
+				},
+				"signIn":{
+					"title": "Sign In",
+					"form": {
+						"inputs": {
+							"emailId": {
+								"title": "Email address",
+								"name": "emailId"
+							},
+							"password": {
+								"title": "Password",
+								"name": "password"
+							}							
+						},
+						"path": "/signIn",
+						"title": "Sign In"
+					}
+				}
+			}
+		}
+	}
+}

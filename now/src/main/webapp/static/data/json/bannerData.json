@@ -1,0 +1,37 @@
+{
+	"projectData": {
+		"projectName": "Now",
+		"defaultPath": "/home"	
+	},
+	"navData": {
+		"mainNavData": [{
+				"title": "Home",
+				"active": true,
+				"disabled": false,
+				"hidden": false,
+				"path": "/home"		
+			},{
+				"title": "About us",
+				"active": false,
+				"disabled": false,
+				"hidden": false,
+				"path": "/aboutUs"		
+			},{
+				"title": "Contact us",
+				"active": false,
+				"disabled": false,
+				"content": "Contact us",
+				"hidden": false,
+				"path": "/contactUs"		
+			}
+		],
+		"configNavData": [{
+				"title": "Register",
+				"active": false,
+				"disabled": false,
+				"hidden": false,
+				"path": "/register"		
+			}		
+		]
+	}
+}
