@@ -1,5 +1,7 @@
 package com.time.now.web.controller;
 
+import java.security.Principal;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -59,4 +61,13 @@ public class CoreController{
 		BannerData bannerData= coreService.fetchBannerData();
 		return bannerData;
 	}
+	
+	  @RequestMapping(value="/login", method = RequestMethod.GET)
+	  public String printWelcome(ModelMap model, Principal principal ) {
+	 
+	      String name = principal.getName(); //get logged in username
+	      model.addAttribute("username", name);
+	      return "hello";
+	 
+	  }	
 }

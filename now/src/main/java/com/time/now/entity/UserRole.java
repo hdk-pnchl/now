@@ -19,14 +19,14 @@ public class UserRole implements Serializable{
 	@GeneratedValue
 	private Long				id;
 	@ManyToOne
-	private User				user;
+	private UserEntity				user;
 	private String				role;
 	
-	public User getUser(){
+	public UserEntity getUser(){
 		return user;
 	}
 	
-	public void setUser(User user){
+	public void setUser(UserEntity user){
 		this.user= user;
 	}
 	

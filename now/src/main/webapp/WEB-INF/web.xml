@@ -24,11 +24,12 @@
 	<!-- Loads Spring Security config file -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>/WEB-INF/spring-security.xml</param-value>
-		<!-- 
-			More then 1 file could be defined in here.
-			/WEB-INF/spring/security/spring-security-context.xml 
-		-->
+        <param-value>
+            /WEB-INF/spring-web-servlet.xml,
+            /WEB-INF/spring-security.xml,
+            /WEB-INF/spring-datasource.xml,
+            /WEB-INF/spring-service.xml
+        </param-value>		
 	</context-param>
 
 	<!-- Spring Security -->
