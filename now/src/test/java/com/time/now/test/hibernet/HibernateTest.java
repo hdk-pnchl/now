@@ -9,7 +9,7 @@ import com.time.now.util.HibernateUtil;
 
 public class HibernateTest{
 	
-	@Test
+	//@Test
 	public void testHibernet(){
 		Session session= HibernateUtil.getInstance().getSessionFactory().openSession();
 		
