@@ -41,12 +41,14 @@
 	    </mvc:message-converters>
 	</mvc:annotation-driven>
 	
-    <bean id="placeholderConfig"
-          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="locations">
-            <list>
-                <value>classpath:login.properties</value>
-            </list>
-        </property>
-    </bean>
+	<!-- 
+	    <bean id="placeholderConfig"
+	          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	        <property name="locations">
+	            <list>
+	                <value>classpath:login.properties</value>
+	            </list>
+	        </property>
+	    </bean>
+     -->
 </beans>
